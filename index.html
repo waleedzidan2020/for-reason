@@ -13,18 +13,10 @@
                 Your browser does not support the video tag.  
               </video>  
         </div>
-        <form action="/action_page.php">
-          <label for="fname">First name:</label><br>
-          <input type="text" id="fname" name="fname" value="John"><br>
-          <label for="lname">Last name:</label><br>
-          <input type="text" id="lname" name="lname" value="Doe"><br><br>
-          <input type="submit" value="Submit">
-        </form> 
         
-        <p>If you click the "Submit" button, the form-data will be sent to a page called "/action_page.php".</p>
-        <button id="cameraButton">Take Photo</button>  
-        <canvas id="photoCanvas"></canvas>  
-
+        
+      
+       
     </div>
   
  
@@ -40,31 +32,7 @@ videoElement.pause();
 
 // Set the volume (0 to 1)  
 videoElement.volume = 0.5;  
-const cameraButton = document.getElementById('cameraButton');  
-const photoCanvas = document.getElementById('photoCanvas');  
 
-cameraButton.addEventListener('click', async () => {  
-  try {  
-    // Request camera access  
-    const stream = await navigator.mediaDevices.getUserMedia({ video: true });  
-
-    // Create a video element and attach the camera stream  
-    const videoElement = document.createElement('video');  
-    videoElement.srcObject = stream;  
-    videoElement.play();  
-
-    // Capture the photo  
-    photoCanvas.width = videoElement.videoWidth;  
-    photoCanvas.height = videoElement.videoHeight;  
-    photoCanvas.getContext('2d').drawImage(videoElement, 0, 0);  
-
-    // Save the captured image or perform other operations  
-    const imageData = photoCanvas.toDataURL('image/png');  
-    console.log(imageData);  
-  } catch (error) {  
-    console.error('Error accessing camera:', error);  
-  }  
-});  
   </script>  
 </body>  
 </html>  
