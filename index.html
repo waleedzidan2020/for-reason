@@ -1,36 +1,51 @@
-<!DOCTYPE html>  
-<html>  
-<head>  
-  <title>Video Player</title>  
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Video Player</title>
   <link rel="stylesheet" href="vid.css">
 
-</head>  
-<body>  
-    <div class="vid">
-        <div class="myVideo">
-            <video  width="914" height="514" controls>  
-                <source src="1.mp4" type="video/mp4">  
-                Your browser does not support the video tag.  
-              </video>  
-        </div>
-   
-       
+</head>
 
+<body>
+  <div class="vid">
+    <div class="myVideo">
+      <video width="914" height="514" controls>
+        <source src="1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
     </div>
-  
- 
+    <h2>HTML Forms</h2>
 
-  <script>  
-    const videoElement = document.getElementById('myVideo');  
+    <form action="/action_page.php">
+      <label for="fname">First name:</label><br>
+      <input type="text" id="fname" name="fname" value="John"><br>
+      <label for="lname">Last name:</label><br>
+      <input type="text" id="lname" name="lname" value="Doe"><br><br>
+      <input type="submit" value="Submit">
+    </form>
 
-// Play the video  
-videoElement.play();  
+    <p>If you click the "Submit" button, the form-data will be sent to a page called "/action_page.php".</p>
 
-// Pause the video  
-videoElement.pause();  
 
-// Set the volume (0 to 1)  
-videoElement.volume = 0.5;  
-  </script>  
-</body>  
-</html>  
+
+
+  </div>
+
+
+
+  <script>
+    const videoElement = document.getElementById('myVideo');
+
+    // Play the video  
+    videoElement.play();
+
+    // Pause the video  
+    videoElement.pause();
+
+    // Set the volume (0 to 1)  
+    videoElement.volume = 0.5;  
+  </script>
+</body>
+
+</html>
